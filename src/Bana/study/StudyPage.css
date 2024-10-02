@@ -1,0 +1,123 @@
+/* General page styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #E8F5E9; /* Light, peaceful green tone */
+}
+
+/* Study Page container */
+.study-page {
+  display: flex;
+  min-height: 100vh;
+  background-color: #F3F4F6; /* Light neutral tone for the background */
+}
+
+/* Sidebar styling */
+.study-sidebar {
+  width: 250px;
+  background-color: #1E88E5; /* Calming blue for the sidebar */
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.study-sidebar:hover {
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Main content area */
+.study-main-content {
+  flex-grow: 1;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 20px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Search Bar styling */
+.search-bar {
+  grid-row: 1 / 2;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.search-bar:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Study content */
+.study-content {
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 20px;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.study-content:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation for tab transitions */
+.study-content > div {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Sidebar links and hover effect */
+.study-sidebar a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.study-sidebar a:hover {
+  background-color: #1565C0;
+  color: #FFF8E1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .study-page {
+    flex-direction: column;
+  }
+
+  .study-sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .study-main-content {
+    grid-template-rows: 1fr auto;
+  }
+}

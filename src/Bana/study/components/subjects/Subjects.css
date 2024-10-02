@@ -1,0 +1,81 @@
+/* Container for the subjects */
+.subjects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    background-color: #f4f6f9;
+    border-radius: 15px;
+    text-align: center;
+    animation: fadeIn 1s ease;
+}
+
+/* Title styling */
+.subjects-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Flexbox layout for the subjects */
+.subjects-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Each subject card */
+.subject-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 220px;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Hover effect on subject cards */
+.subject-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Subject name styling */
+.subject-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #34495e;
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .subjects-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subject-card {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
